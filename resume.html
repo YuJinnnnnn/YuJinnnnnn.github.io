@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Yu Jin</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
+        <span class="brand__role">Editor</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigate">
+        <a class="isActive" href="./resume.html">Resume</a>
+        <span class="nav__sep" aria-hidden="true">|</span>
+        <a href="./projects.html">Projects</a>
+        <span class="nav__sep" aria-hidden="true">|</span>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageTitle">
+      <h1 class="pageTitle__h1">Resume</h1>
+    </section>
+
+    <section class="section">
+      <h3 class="section__title">Work Experience</h3>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>PhD Candidate · UNIST</strong>
+              <span class="muted">2025 — Present</span>
+            </div>
+            <p class="muted">To be added.</p>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>Research Intern · Lab/Company</strong>
+              <span class="muted">2023 — 2024</span>
+            </div>
+            <p class="muted">To be added.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="section__title">Education</h3>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>UNIST · PhD</strong>
+              <span class="muted">2025 — Present</span>
+            </div>
+            <p class="muted">To be added.</p>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>University · Bachelor</strong>
+              <span class="muted">2020 — 2024</span>
+            </div>
+            <p class="muted">To be added.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="section__title">Skills & Expertise</h3>
+      <div class="card">
+        <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8;">
+          <li>Skill 1</li>
+          <li>Skill 2</li>
+          <li>Skill 3</li>
+          <li>Skill 4</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="footer__title">Email</div>
+        <div class="footer__text"><a href="mailto:yujin0928@unist.ac.kr">yujin0928@unist.ac.kr</a></div>
+      </div>
+      <div class="footer__col footer__legal">
+        <div>© <span id="year"></span> Yu Jin</div>
+        <div class="muted">Powered by GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
