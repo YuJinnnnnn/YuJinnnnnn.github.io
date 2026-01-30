@@ -98,7 +98,7 @@ body{
   object-fit: cover;
   display:block;
   margin: 0 auto;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 }
 .hero__avatarFallback{
   width: 440px;
