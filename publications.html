@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="En">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | Yu Jin</title>
+  <meta name="description" content="Publications of Yu Jin" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
+        <span class="brand__role">Designer, PhD Candidate</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigate">
+        <a href="./resume.html">Resume</a>
+        <span class="nav__sep">|</span>
+        <a href="./projects.html">Projects</a>
+        <span class="nav__sep">|</span>
+        <a class="isActive" href="./publications.html">Publications</a>
+        <span class="nav__sep">|</span>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageTitle">
+      <h1 class="pageTitle__h1">Publications</h1>
+      <p class="muted" style="margin: 10px 0 0; max-width: 70ch; line-height: 1.7;">
+        To be added.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="pubList">
+
+          <!-- One -->
+          <article class="pub">
+            <div class="pub__row">
+              <div class="pub__main">
+                <div class="pub__title">
+                  Paper Title Goes Here
+                </div>
+                <div class="pub__meta muted">
+                  <strong>Yu Jin</strong>, Coauthor A, Coauthor B. <em>Conference / Journal</em>, 2026.
+                </div>
+              </div>
+
+              <div class="pub__links">
+                <a class="pillLink" href="#" target="_blank" rel="noreferrer">PDF</a>
+                <a class="pillLink" href="#" target="_blank" rel="noreferrer">DOI</a>
+                <a class="pillLink" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub__row">
+              <div class="pub__main">
+                <div class="pub__title">
+                  Another Paper Title
+                </div>
+                <div class="pub__meta muted">
+                  Coauthor A, <strong>Yu Jin</strong>. <em>Workshop</em>, 2025.
+                </div>
+              </div>
+
+              <div class="pub__links">
+                <a class="pillLink" href="#" target="_blank" rel="noreferrer">PDF</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Two -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__legal">
+        <div>© <span id="year"></span> By Yu Jin.</div>
+        <div class="muted">Powered and secured by GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
