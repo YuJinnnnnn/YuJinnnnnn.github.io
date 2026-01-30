@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="En">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Yu Jin</title>
+  <meta name="description" content="Projects of Yu Jin" />
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
@@ -14,10 +16,13 @@
         <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
         <span class="brand__role">Designer, PhD Candidate</span>
       </div>
-      <nav class="nav">
+
+      <nav class="nav" aria-label="Navigate">
         <a href="./resume.html">Resume</a>
         <span class="nav__sep">|</span>
         <a class="isActive" href="./projects.html">Projects</a>
+        <span class="nav__sep">|</span>
+        <a href="./publications.html">Publications</a>
         <span class="nav__sep">|</span>
         <a href="./contact.html">Contact</a>
       </nav>
@@ -29,53 +34,92 @@
       <h1 class="pageTitle__h1">Projects</h1>
     </section>
 
-    <section class="section">
-      <div class="grid">
-        <!-- Projects -->
-        <article class="proj">
-          <div class="proj__thumb" aria-hidden="true"></div>
-          <h4 class="proj__title">Project A</h4>
-          <p class="muted">To be added.</p>
-          <div class="proj__meta">
-            <span class="pill">HTML/CSS</span>
-            <div class="proj__links">
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
-              <a href="#" target="_blank" rel="noreferrer">Demo</a>
-            </div>
+    <section class="projectsPage">
+      <!-- Project 01 -->
+      <article class="projectRow">
+        <div class="projectRow__text">
+          <h2 class="projectRow__title">Project Name 01</h2>
+          <p class="projectRow__desc">
+            To be added.
+          </p>
+          <div class="projectRow__links">
+            <a class="textLink" href="#" target="_blank" rel="noreferrer">Code</a>
+            <span class="muted">·</span>
+            <a class="textLink" href="#" target="_blank" rel="noreferrer">Demo</a>
           </div>
-        </article>
+        </div>
 
-        <article class="proj">
-          <div class="proj__thumb" aria-hidden="true"></div>
-          <h4 class="proj__title">Project B</h4>
-          <p class="muted">To be added.</p>
-          <div class="proj__meta">
-            <span class="pill">Python</span>
-            <div class="proj__links">
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </div>
-        </article>
+        <div class="projectRow__media">
+          <!-- images/p1.jpg -->
+          <img class="projectRow__img" src="./images/p1.jpg" alt="Project 01 image"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="projectRow__imgFallback" style="display:none;" aria-hidden="true">IMAGE</div>
+        </div>
+      </article>
 
-        <article class="proj">
-          <div class="proj__thumb" aria-hidden="true"></div>
-          <h4 class="proj__title">Project C</h4>
-          <p class="muted">To be added.</p>
-          <div class="proj__meta">
-            <span class="pill">Research</span>
-            <div class="proj__links">
-              <a href="#" target="_blank" rel="noreferrer">Paper</a>
-            </div>
+      <!-- Project 02 -->
+      <article class="projectRow">
+        <div class="projectRow__text">
+          <h2 class="projectRow__title">Project Name 02</h2>
+          <p class="projectRow__desc">
+            To be added.
+          </p>
+          <div class="projectRow__links">
+            <a class="textLink" href="#" target="_blank" rel="noreferrer">Paper</a>
           </div>
-        </article>
-      </div>
+        </div>
+
+        <div class="projectRow__media">
+          <img class="projectRow__img" src="./images/p2.jpg" alt="Project 02 image"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="projectRow__imgFallback" style="display:none;" aria-hidden="true">IMAGE</div>
+        </div>
+      </article>
+
+      <!-- Project 03 -->
+      <article class="projectRow">
+        <div class="projectRow__text">
+          <h2 class="projectRow__title">Project Name 03</h2>
+          <p class="projectRow__desc">
+            To be added.
+          </p>
+          <div class="projectRow__links">
+            <a class="textLink" href="#" target="_blank" rel="noreferrer">Work</a>
+          </div>
+        </div>
+
+        <div class="projectRow__media">
+          <img class="projectRow__img" src="./images/p3.jpg" alt="Project 03 image"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="projectRow__imgFallback" style="display:none;" aria-hidden="true">IMAGE</div>
+        </div>
+      </article>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="footer__title">Phone</div>
+        <div class="footer__text">010-6704-9928</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Email</div>
+        <div class="footer__text"><a href="mailto:yujin0928@unist.ac.kr">yujin0928@unist.ac.kr</a></div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Follow Me</div>
+        <div class="footer__icons">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+
       <div class="footer__col footer__legal">
-        <div>© <span id="year"></span>Yu Jin</div>
+        <div>© <span id="year"></span> By Yu Jin.</div>
+        <div class="muted">Powered and secured by GitHub Pages</div>
       </div>
     </div>
   </footer>
