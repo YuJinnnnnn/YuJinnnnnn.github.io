@@ -342,3 +342,12 @@ body{
   .hero__title{ font-size: 52px; }
   .circleBtn{ width: 104px; height: 104px; }
 }
+
+.pageTitle{
+  padding: 44px 0 10px;
+}
+.pageTitle__h1{
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: -0.5px;
+}
