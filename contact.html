@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="En">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Yu Jin</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
+        <span class="brand__role">Editor</span>
+      </div>
+      <nav class="nav">
+        <a href="./resume.html">Resume</a>
+        <span class="nav__sep">|</span>
+        <a href="./projects.html">Projects</a>
+        <span class="nav__sep">|</span>
+        <a class="isActive" href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageTitle">
+      <h1 class="pageTitle__h1">Contact</h1>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <p class="muted">Email：<a href="mailto:yujin0928@unist.ac.kr">yujin0928@unist.ac.kr</a></p>
+        <p class="muted">GitHub：<a href="https://github.com/YuJinnnnnn" target="_blank" rel="noreferrer">github.com/YuJinnnnnn</a></p>
+
+        <div class="contactRow">
+          <a class="btn" href="mailto:you@example.com">Email Me</a>
+          <a class="btn btn--ghost" href="./index.html">Back Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__legal">
+        <div>© <span id="year"></span>Yu Jin</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
