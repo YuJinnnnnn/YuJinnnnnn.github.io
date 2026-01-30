@@ -351,3 +351,71 @@ body{
   font-size: 44px;
   letter-spacing: -0.5px;
 }
+
+/* ===== Projects page override (force Wix-like layout) ===== */
+
+.projectsPage{
+  padding: 20px 0 60px;
+}
+
+.projectRow{
+  display: grid;
+  grid-template-columns: 1fr 520px; 
+  gap: 60px;
+  align-items: start;
+
+  margin-bottom: 80px;
+}
+
+.projectRow:last-child{
+  margin-bottom: 0;
+}
+
+.projectRow__text{
+  max-width: 560px;
+}
+
+.projectRow__title{
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.projectRow__desc{
+  margin: 0;
+  line-height: 1.7;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.projectRow__media{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projectRow__img,
+.projectRow__imgFallback{
+  width: 520px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 980px){
+  .projectRow{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .projectRow__media{
+    justify-content: flex-start;
+  }
+
+  .projectRow__img,
+  .projectRow__imgFallback{
+    width: 100%;
+    height: 240px;
+  }
+}
