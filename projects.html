@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Yu Jin</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
+        <span class="brand__role">Designer, PhD Candidate</span>
+      </div>
+      <nav class="nav">
+        <a href="./resume.html">Resume</a>
+        <span class="nav__sep">|</span>
+        <a class="isActive" href="./projects.html">Projects</a>
+        <span class="nav__sep">|</span>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageTitle">
+      <h1 class="pageTitle__h1">Projects</h1>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <!-- Projects -->
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project A</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">HTML/CSS</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project B</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">Python</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project C</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">Research</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__legal">
+        <div>© <span id="year"></span>Yu Jin</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
