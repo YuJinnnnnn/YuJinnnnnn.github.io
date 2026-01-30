@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yu Jin | CV</title>
+  <meta name="description" content="Personal Website" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">Yu Jin</span>
+        <span class="brand__role">Designer, PhD Candidate</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigate">
+        <a href="#resume">Resume</a>
+        <span class="nav__sep" aria-hidden="true">|</span>
+        <a href="#projects">Projects</a>
+        <span class="nav__sep" aria-hidden="true">|</span>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero" id="top">
+      <div class="hero__left">
+        <!-- profile.jpg -->
+        <img class="hero__avatar" src="./avatar.jpg" alt="profile" onerror="this.style.display='none';document.querySelector('.hero__avatarFallback').style.display='block';" />
+        <div class="hero__avatarFallback" aria-hidden="true">AVATAR</div>
+      </div>
+
+      <div class="hero__right">
+        <h1 class="hero__title">Hello</h1>
+        <h2 class="hero__subtitle">A Bit About Me</h2>
+        <p class="hero__text">
+          My name is Yu Jin. I am a PhD candidate at UNIST right now. Welcome to my personal website.
+        </p>
+
+        <div class="hero__buttons" aria-label="fast entrance">
+          <a class="circleBtn circleBtn--yellow" href="#resume">Resume</a>
+          <a class="circleBtn circleBtn--red" href="#projects">Projects</a>
+          <a class="circleBtn circleBtn--teal" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="section" id="resume">
+      <h3 class="section__title">Resume</h3>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>Designer, PhD Candidate</strong>
+              <span class="muted">2021 — Present</span>
+            </div>
+            <p class="muted">
+             To be added.
+            </p>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__head">
+              <strong>Designer, PhD Candidate</strong>
+              <span class="muted">2022 — 2024</span>
+            </div>
+            <p class="muted">
+              To be added.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h3 class="section__title">Projects</h3>
+      <div class="grid">
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project A</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">HTML/CSS</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project B</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">Python</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__thumb" aria-hidden="true"></div>
+          <h4 class="proj__title">Project C</h4>
+          <p class="muted">To be added.</p>
+          <div class="proj__meta">
+            <span class="pill">UI/UX</span>
+            <div class="proj__links">
+              <a href="#" target="_blank" rel="noreferrer">Work</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h3 class="section__title">Contact</h3>
+      <div class="card">
+        <p class="muted">
+          Phone: 010-6704-9928
+        </p>
+        <div class="contactRow">
+          <a class="btn" href="mailto:yujin0928@unist.ac.kr">Email Me</a>
+          <a class="btn btn--ghost" href="https://github.com/YuJinnnnnn" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="footer__title">Phone</div>
+        <div class="footer__text">010-6704-9928</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Email</div>
+        <div class="footer__text"><a href="mailto:yujin0928@unist.ac.kr">you@example.com</a></div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Follow Me</div>
+        <div class="footer__icons">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <div class="footer__col footer__legal">
+        <div>© <span id="year"></span> By Yu Jin.</div>
+        <div class="muted">Powered and secured by GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 2026
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 平滑滚动（兼容某些浏览器）
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", id);
+      });
+    });
+
+    // 简单导航高亮（可选）
+    const sections = ["#resume","#projects","#contact"].map(s => document.querySelector(s)).filter(Boolean);
+    const links = Array.from(document.querySelectorAll(".nav a"));
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        links.forEach(l => l.classList.remove("isActive"));
+        const active = links.find(l => l.getAttribute("href") === "#" + en.target.id);
+        if (active) active.classList.add("isActive");
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+    sections.forEach(s => obs.observe(s));
+  </script>
+</body>
+</html>
