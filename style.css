@@ -270,6 +270,15 @@ body{
   background: #fafafa;
 }
 
+/* Contact actions (resume style) */
+.contactActions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+
 /* Footer */
 .footer{
   margin-top: 34px;
