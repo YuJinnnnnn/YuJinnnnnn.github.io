@@ -5,14 +5,14 @@ const ctx = canvas.getContext("2d");
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-let particles = [];
+let smokeParticles = [];
 
 let mouse = {
   x: width / 2,
   y: height / 2
 };
 
-let trail = {
+let lastMouse = {
   x: width / 2,
   y: height / 2
 };
@@ -27,32 +27,34 @@ window.addEventListener("resize", () => {
   canvas.height = height;
 });
 
-const palette = [
+const smokeColors = [
   "rgba(0, 255, 213,",
-  "rgba(255, 0, 204,",
-  "rgba(128, 0, 255,",
-  "rgba(0, 136, 255,",
-  "rgba(255, 255, 0,"
+  "rgba(170, 80, 255,",
+  "rgba(255, 0, 180,",
+  "rgba(80, 120, 255,",
+  "rgba(210, 255, 80,"
 ];
 
-function createParticle(x, y, intensity = 1) {
-  const particleCount = Math.floor(10 + intensity * 10);
+function createSmoke(x, y, movement) {
+  const count = Math.min(10, Math.max(3, Math.floor(movement / 10)));
 
-  for (let i = 0; i < particleCount; i++) {
+  for (let i = 0; i < count; i++) {
     const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 2.6 + 0.5;
-    const size = Math.random() * 90 + 38;
+    const distance = Math.random() * 34;
+    const size = Math.random() * 180 + 90;
 
-    particles.push({
-      x,
-      y,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      size,
-      alpha: Math.random() * 0.22 + 0.16,
-      decay: Math.random() * 0.0035 + 0.0018,
-      shrink: Math.random() * 0.006 + 0.982,
-      color: palette[Math.floor(Math.random() * palette.length)]
+    smokeParticles.push({
+      x: x + Math.cos(angle) * distance,
+      y: y + Math.sin(angle) * distance,
+      vx: (Math.random() - 0.5) * 1.2,
+      vy: (Math.random() - 0.5) * 1.2 - 0.25,
+      size: size,
+      alpha: Math.random() * 0.16 + 0.08,
+      decay: Math.random() * 0.0014 + 0.0009,
+      growth: Math.random() * 0.45 + 0.25,
+      rotation: Math.random() * Math.PI * 2,
+      rotationSpeed: (Math.random() - 0.5) * 0.006,
+      color: smokeColors[Math.floor(Math.random() * smokeColors.length)]
     });
   }
 }
@@ -60,76 +62,85 @@ function createParticle(x, y, intensity = 1) {
 window.addEventListener("mousemove", (event) => {
   if (!intro || intro.classList.contains("intro--hidden")) return;
 
-  const dx = event.clientX - mouse.x;
-  const dy = event.clientY - mouse.y;
-  const movement = Math.sqrt(dx * dx + dy * dy);
-
   mouse.x = event.clientX;
   mouse.y = event.clientY;
 
-  if (movement > 2) {
-    createParticle(mouse.x, mouse.y, Math.min(movement / 20, 3));
+  const dx = mouse.x - lastMouse.x;
+  const dy = mouse.y - lastMouse.y;
+  const movement = Math.sqrt(dx * dx + dy * dy);
+
+  if (movement > 4) {
+    createSmoke(mouse.x, mouse.y, movement);
+    lastMouse.x = mouse.x;
+    lastMouse.y = mouse.y;
   }
 });
 
-function animateParticles() {
+function drawSmokeParticle(particle) {
+  const gradient = ctx.createRadialGradient(
+    particle.x,
+    particle.y,
+    0,
+    particle.x,
+    particle.y,
+    particle.size
+  );
+
+  gradient.addColorStop(0, `${particle.color}${particle.alpha})`);
+  gradient.addColorStop(0.22, `${particle.color}${particle.alpha * 0.75})`);
+  gradient.addColorStop(0.48, `${particle.color}${particle.alpha * 0.32})`);
+  gradient.addColorStop(0.76, `${particle.color}${particle.alpha * 0.1})`);
+  gradient.addColorStop(1, `${particle.color}0)`);
+
+  ctx.save();
+  ctx.translate(particle.x, particle.y);
+  ctx.rotate(particle.rotation);
+  ctx.scale(1.45, 0.72);
+  ctx.translate(-particle.x, -particle.y);
+
+  ctx.beginPath();
+  ctx.fillStyle = gradient;
+  ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.restore();
+}
+
+function animateSmoke() {
   ctx.clearRect(0, 0, width, height);
-
-  trail.x += (mouse.x - trail.x) * 0.08;
-  trail.y += (mouse.y - trail.y) * 0.08;
-
-  if (!intro.classList.contains("intro--hidden")) {
-    createParticle(trail.x, trail.y, 0.35);
-  }
 
   ctx.save();
   ctx.globalCompositeOperation = "screen";
-  ctx.filter = "blur(18px)";
+  ctx.filter = "blur(34px)";
 
-  particles.forEach((particle, index) => {
+  smokeParticles.forEach((particle, index) => {
     particle.x += particle.vx;
     particle.y += particle.vy;
 
-    particle.vx *= 0.988;
-    particle.vy *= 0.988;
+    particle.vx *= 0.993;
+    particle.vy *= 0.993;
 
-    particle.size *= particle.shrink;
+    particle.size += particle.growth;
     particle.alpha -= particle.decay;
+    particle.rotation += particle.rotationSpeed;
 
-    const gradient = ctx.createRadialGradient(
-      particle.x,
-      particle.y,
-      0,
-      particle.x,
-      particle.y,
-      particle.size
-    );
+    drawSmokeParticle(particle);
 
-    gradient.addColorStop(0, `${particle.color}${particle.alpha})`);
-    gradient.addColorStop(0.35, `${particle.color}${particle.alpha * 0.55})`);
-    gradient.addColorStop(0.72, `${particle.color}${particle.alpha * 0.18})`);
-    gradient.addColorStop(1, `${particle.color}0)`);
-
-    ctx.beginPath();
-    ctx.fillStyle = gradient;
-    ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-    ctx.fill();
-
-    if (particle.alpha <= 0 || particle.size <= 3) {
-      particles.splice(index, 1);
+    if (particle.alpha <= 0 || particle.size > 420) {
+      smokeParticles.splice(index, 1);
     }
   });
 
   ctx.restore();
 
-  if (particles.length > 420) {
-    particles.splice(0, particles.length - 420);
+  if (smokeParticles.length > 160) {
+    smokeParticles.splice(0, smokeParticles.length - 160);
   }
 
-  requestAnimationFrame(animateParticles);
+  requestAnimationFrame(animateSmoke);
 }
 
-animateParticles();
+animateSmoke();
 
 enterButton.addEventListener("click", () => {
   intro.classList.add("intro--hidden");
