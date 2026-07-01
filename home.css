@@ -171,63 +171,6 @@ body {
   gap: 32px;
 }
 
-.homeBtn {
-  min-width: 190px;
-  height: 58px;
-  padding: 0 26px;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 800;
-  background: rgba(255, 255, 255, 0.018);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(12px);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.homeBtn span {
-  font-size: 19px;
-  line-height: 1;
-}
-
-.homeBtn--purple {
-  border-color: rgba(180, 92, 255, 0.68);
-  box-shadow:
-    0 0 18px rgba(180, 92, 255, 0.14),
-    inset 0 0 16px rgba(180, 92, 255, 0.04);
-}
-
-.homeBtn--cyan {
-  border-color: rgba(0, 229, 255, 0.62);
-  box-shadow:
-    0 0 18px rgba(0, 229, 255, 0.12),
-    inset 0 0 16px rgba(0, 229, 255, 0.04);
-}
-
-.homeBtn:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.055);
-}
-
-.homeBtn--purple:hover {
-  box-shadow:
-    0 0 30px rgba(180, 92, 255, 0.38),
-    inset 0 0 20px rgba(180, 92, 255, 0.1);
-}
-
-.homeBtn--cyan:hover {
-  box-shadow:
-    0 0 30px rgba(0, 229, 255, 0.32),
-    inset 0 0 20px rgba(0, 229, 255, 0.1);
-}
 
 /* Hide old footer on homepage */
 .footer {
@@ -291,4 +234,20 @@ body {
     height: 56px;
     font-size: 15px;
   }
+
+.homeHero__actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.homeHero__actions .intro__button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  height: 66px;
+  margin: 0;
 }
