@@ -90,7 +90,7 @@ body {
   margin: 0 auto;
   padding: 130px 56px 90px;
   display: grid;
-  grid-template-columns: 420px minmax(720, 1fr);
+  grid-template-columns: 420px 1fr;
   align-items: center;
   column-gap: 150px;
 }
