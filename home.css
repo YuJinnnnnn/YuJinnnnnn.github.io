@@ -171,6 +171,14 @@ body {
   gap: 32px;
 }
 
+.homeHero__actions .intro__button {
+  text-decoration: none;
+}
+
+.homeHero__actions .intro__button:hover {
+  text-decoration: none;
+}
+
 
 /* Hide old footer on homepage */
 .footer {
