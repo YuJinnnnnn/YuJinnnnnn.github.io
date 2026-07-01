@@ -86,11 +86,11 @@ body {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  max-width: 1260px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 130px 56px 90px;
   display: grid;
-  grid-template-columns: 420px minmax(0, 1fr);
+  grid-template-columns: 420px minmax(720, 1fr);
   align-items: center;
   column-gap: 150px;
 }
@@ -127,7 +127,7 @@ body {
 
 /* Right side */
 .homeHero__content {
-  max-width: 720px;
+  max-width: 780px;
   padding-top: 48px;
 }
 
