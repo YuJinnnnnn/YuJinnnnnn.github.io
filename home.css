@@ -270,7 +270,7 @@ body {
   }
 
   .homeHero__title {
-    font-size: clamp(72px, 20vw, 112px);
+    font-size: clamp(42px, 3.2vw, 60px);
   }
 
   .homeHero__subtitle {
