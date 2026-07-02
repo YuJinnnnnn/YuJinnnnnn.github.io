@@ -235,26 +235,65 @@ body {
   gap: 24px;
 }
 
-.homeHero__actions .intro__button {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 210px;
-  height: 66px;
-  margin: 0;
-}
 
-.homeHero__actions a.intro__button,
-.homeHero__actions a.intro__button:link,
-.homeHero__actions a.intro__button:visited,
-.homeHero__actions a.intro__button:hover,
-.homeHero__actions a.intro__button:active {
-  text-decoration: none;
-}
 
 /*--------------------------------------------*/
 /* Home Projects Section */
+
+/* Unified pill button, based on landing page button */
+.siteBtn {
+  position: relative;
+  z-index: 3;
+  min-width: 210px;
+  height: 66px;
+  padding: 0 34px;
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 30px rgba(0, 255, 213, 0.16),
+    inset 0 0 18px rgba(255, 255, 255, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.siteBtn:hover {
+  background: rgba(0, 255, 213, 0.16);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 36px rgba(0, 255, 213, 0.42),
+    0 0 80px rgba(255, 0, 204, 0.2),
+    inset 0 0 18px rgba(255, 255, 255, 0.12);
+}
+
+.siteBtn,
+.siteBtn:link,
+.siteBtn:visited,
+.siteBtn:hover,
+.siteBtn:active {
+  color: #fff;
+  text-decoration: none;
+}
 
 .homeProjects {
   position: relative;
