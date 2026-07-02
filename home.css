@@ -422,3 +422,17 @@ body {
     height: 220px;
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  scroll-snap-type: y proximity;
+}
+
+.homeHero,
+.homeProjects {
+  scroll-snap-align: start;
+}
