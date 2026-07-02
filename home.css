@@ -69,7 +69,6 @@ body {
 .home {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
   background: var(--home-bg);
 }
 
@@ -80,6 +79,7 @@ body {
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .homeHero {
@@ -163,23 +163,6 @@ body {
   margin: 0 12px;
 }
 
-/* Buttons */
-.homeHero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 32px;
-}
-
-.homeHero__actions .intro__button {
-  text-decoration: none;
-}
-
-.homeHero__actions .intro__button:hover {
-  text-decoration: none;
-}
-
-
 /* Hide old footer on homepage */
 .footer {
   display: none;
@@ -223,7 +206,7 @@ body {
   }
 
   .homeHero__title {
-    font-size: clamp(42px, 3.2vw, 60px);
+    font-size: clamp(36px, 9vw, 52px);
   }
 
   .homeHero__subtitle {
@@ -437,7 +420,7 @@ html {
 }
 
 .home {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 .homeHero,
