@@ -39,12 +39,12 @@
     <div class="container topbar__inner">
       <div class="brand">
         <span class="brand__dot" aria-hidden="true"></span>
-        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Back</a>
+        <a class="brand__name" href="./index.html" style="text-decoration:none;color:inherit;">Yu Jin</a>
         <span class="brand__role">Designer, PhD Candidate</span>
       </div>
 
       <nav class="nav" aria-label="Navigate">
-        <a href="./projects.html">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="./CV-2026.pdf" download>Resume</a>
         <a href="https://scholar.google.com/citations?user=1RRsfpUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a>
         <a href="./contact.html">Contact</a>
@@ -56,107 +56,89 @@
 <main class="home">
   <canvas id="home-ambient"></canvas>
 
-  <section class="homeHero" id="top">
-  <div class="homeHero__left">
-    <div class="homeHero__eyebrow">
-      HELLO, I'M
+  <section class="homeHero" id="top" aria-label="Introduction">
+    <h1 class="maskedHeading" data-mask-heading aria-label="Hi, I am Yu JIN.">
+      <svg class="maskedHeading__svg" viewBox="0 0 1200 230" role="img" aria-hidden="true">
+        <defs>
+          <clipPath id="title-video-clip">
+            <text x="600" y="174" text-anchor="middle">Hi, I am Yu JIN.</text>
+          </clipPath>
+        </defs>
+        <foreignObject class="maskedHeading__videoFrame" x="-90" y="-42" width="1380" height="314" clip-path="url(#title-video-clip)">
+          <video class="maskedHeading__video" src="./title-fill.mp4" autoplay muted loop playsinline preload="auto"></video>
+        </foreignObject>
+      </svg>
+    </h1>
+    <div class="homeSocial">
+      <button class="musicToggle" id="music-toggle" type="button" aria-label="Play background music" aria-pressed="false">
+        <svg class="musicToggle__svg" viewBox="0 0 128 128" aria-hidden="true">
+          <defs>
+            <radialGradient id="vinyl-sheen" cx="34%" cy="26%" r="74%">
+              <stop offset="0" stop-color="#3f4148"/>
+              <stop offset=".3" stop-color="#131419"/>
+              <stop offset=".76" stop-color="#050507"/>
+              <stop offset="1" stop-color="#24252a"/>
+            </radialGradient>
+            <linearGradient id="tonearm-metal" x1="0" x2="1">
+              <stop stop-color="#8d909a"/><stop offset=".48" stop-color="#f5f5f7"/><stop offset="1" stop-color="#8b8e97"/>
+            </linearGradient>
+          </defs>
+          <g class="musicToggle__disc">
+            <circle cx="57" cy="70" r="49" fill="url(#vinyl-sheen)"/>
+            <circle cx="57" cy="70" r="45" fill="none" stroke="#5e6067" stroke-opacity=".35" stroke-width=".6"/>
+            <circle cx="57" cy="70" r="38" fill="none" stroke="#777981" stroke-opacity=".22" stroke-width=".55"/>
+            <circle cx="57" cy="70" r="30" fill="none" stroke="#777981" stroke-opacity=".2" stroke-width=".5"/>
+            <circle cx="57" cy="70" r="17" fill="#111218" stroke="#5f6169" stroke-width=".6"/>
+            <circle cx="57" cy="70" r="4.2" fill="#d0aff3"/>
+            <circle cx="57" cy="70" r="1.6" fill="#101016"/>
+          </g>
+          <g class="musicToggle__tonearm">
+            <circle cx="109" cy="13" r="9" fill="#e9e9ed" stroke="#9699a3" stroke-width=".8"/>
+            <circle cx="109" cy="13" r="3" fill="#b9bcc5"/>
+            <path d="M109 13 C101 35 95 57 91 78 C88 89 82 96 74 101" fill="none" stroke="#5e6068" stroke-width="5" stroke-linecap="round"/>
+            <path d="M109 13 C101 35 95 57 91 78 C88 89 82 96 74 101" fill="none" stroke="url(#tonearm-metal)" stroke-width="2.7" stroke-linecap="round"/>
+            <path d="M70 99 l9 -4 5 8 -9 5z" fill="#f2f2f4" stroke="#8d9098" stroke-width=".6"/>
+          </g>
+        </svg>
+      </button>
     </div>
+    <audio id="background-music" src="./memories-in-the-haze.mp3" loop preload="metadata"></audio>
+  </section>
 
-    <img
-      class="homeHero__avatar"
-      src="./profile img.jpg"
-      alt="Yu Jin profile photo"
-      onerror="this.style.display='none';"
-    />
-  </div>
-
-  <div class="homeHero__content">
-    <h1 class="homeHero__title">Yu Jin</h1>
-
-    <p class="homeHero__bio">
-      I am a PhD candidate at UNIST, where I explore how emerging
-      technologies like generative AI can create more meaningful,
-      personalized, and sustainable experiences in fashion and beyond.
-      My work sits at the intersection of design, technology, and people,
-      driven by curiosity and a commitment to human-centered impact.
-    </p>
-
-    <h2 class="homeHero__subtitle">
-      Fashion <span>×</span> AI <span>×</span> Human-Centered Design
-    </h2>
-
-    <div class="homeHero__actions">
-      <a class="intro__button homeBtn" href="#projects">
-        View Projects ↗
-      </a>
-
-      <a class="intro__button homeBtn" href="./CV-2026.pdf" download>
-        Download CV ↗
-      </a>
-
-      <a class="intro__button homeBtn" href="https://scholar.google.com/citations?user=1RRsfpUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-        View Publications ↗
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Projects Section -->
-  <section class="homeProjects" id="projects">
-    <div class="homeProjects__head">
-      <div>
-        <p class="homeProjects__eyebrow">SELECTED WORKS</p>
-        <h2 class="homeProjects__title">Projects</h2>
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="fallingText" data-falling-text aria-labelledby="about-title">
+      <div class="fallingText__titleRow">
+        <p class="fallingText__label" id="about-title">Click me</p>
       </div>
-
-      <p class="homeProjects__intro">
-        A selection of work across generative AI, fashion design, user research,
-        service design, and human-centered technology.
+      <p class="fallingText__copy">
+        <span class="fallingText__summary">I am a design researcher exploring</span> <span class="fallingText__fallingSource">the intersection of</span> <span class="fallingText__summary">generative AI, human-AI interaction, and creative practice.</span>
+        <span class="fallingText__fallingSource">With a background in fashion design and garment technology,</span> <span class="fallingText__summary">I am currently a Ph.D. Candidate</span> <span class="fallingText__fallingSource">in Design</span> <span class="fallingText__summary">at UNIST,</span> <span class="fallingText__fallingSource">where I study how AI can support creative professionals in ideation, visual exploration, and decision-making. My work combines user research, design experimentation, prototyping, and generative AI to develop more human-centered creative tools and workflows. Beyond academia, I have experience in commercial fashion design, project management, and industry collaboration, with a particular interest in translating emerging technologies into meaningful user experiences.</span>
       </p>
     </div>
+  </section>
 
-    <div class="homeProjects__grid">
-      <a class="homeProjectCard" href="./projects.html#fiesta">
-        <div class="homeProjectCard__image">
-          <img src="./fiesta2025.png" alt="Fiésta project preview" />
-        </div>
-        <div class="homeProjectCard__body">
-          <p class="homeProjectCard__tag">Generative AI · Fashion Design</p>
-          <h3>Fiésta</h3>
-          <p>
-            A generative AI-powered fashion design platform exploring how AI can
-            support inspiration, concept development, and visual experimentation.
-          </p>
-        </div>
+
+  <section class="homeProjects" id="projects" aria-label="Selected projects">
+    <div class="projectAccordion" data-project-accordion role="list" aria-label="Projects">
+      <a class="accordionPanel" href="https://www.behance.net/gallery/245881231/Fista" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Fiésta — open on Behance">
+        <img src="./cover-fiesta.png" alt="Fiésta cover" />
+        <span class="accordionPanel__shade"></span><span class="accordionPanel__number">01</span><span class="accordionPanel__label">Fiésta</span>
       </a>
-
-      <a class="homeProjectCard" href="./projects.html#runwayclo">
-        <div class="homeProjectCard__image">
-          <img src="./runwayclo.png" alt="RunwayCLO project preview" />
-        </div>
-        <div class="homeProjectCard__body">
-          <p class="homeProjectCard__tag">Fashion Tech · UX Research</p>
-          <h3>RunwayCLO</h3>
-          <p>
-            A digital fashion and 3D garment experience connecting design
-            workflows, visualization, and user-centered interaction.
-          </p>
-        </div>
+      <a class="accordionPanel" href="https://www.behance.net/gallery/250854495/Mood-Lamp" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Mood Lamp — open on Behance">
+        <img src="./cover-mood-lamp.png" alt="Mood Lamp cover" />
+        <span class="accordionPanel__shade"></span><span class="accordionPanel__number">02</span><span class="accordionPanel__label">Mood Lamp</span>
       </a>
-
-      <a class="homeProjectCard" href="./projects.html#service">
-        <div class="homeProjectCard__image">
-          <img src="./flow.png" alt="Service design project preview" />
-        </div>
-        <div class="homeProjectCard__body">
-          <p class="homeProjectCard__tag">Service Design · UX</p>
-          <h3>Service Design Research</h3>
-          <p>
-            Cross-disciplinary design work exploring future experiences,
-            communication, mobility, and socially meaningful services.
-          </p>
-        </div>
+      <button class="accordionPanel is-active" type="button" role="listitem" aria-label="xEV" aria-current="true">
+        <img src="./cover-xev.png" alt="xEV cover" />
+        <span class="accordionPanel__shade"></span><span class="accordionPanel__number">03</span><span class="accordionPanel__label">xEV</span>
+      </button>
+      <a class="accordionPanel" href="https://ifdesign.com/en/winner-ranking/project/ice-fashion-low-back-brace/581500" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="ICE — open on iF Design">
+        <img src="./cover-ice.png" alt="ICE cover" />
+        <span class="accordionPanel__shade"></span><span class="accordionPanel__number">04</span><span class="accordionPanel__label">ICE</span>
+      </a>
+      <a class="accordionPanel" href="https://www.behance.net/yujin60" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Other projects — open on Behance">
+        <img src="./cover-other.png" alt="Other projects cover" />
+        <span class="accordionPanel__shade"></span><span class="accordionPanel__number">05</span><span class="accordionPanel__label">Other</span>
       </a>
     </div>
   </section>
@@ -199,5 +181,7 @@
   </script>
   <script src="./intro.js"></script>
   <script src="./home-ambient.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+  <script src="./home.js"></script>
 </body>
 </html>
