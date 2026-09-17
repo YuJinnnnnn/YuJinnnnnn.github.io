@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Zhixu research memory assistant</title>
+  <desc id="desc">A stylized preview of the Zhixu project dashboard.</desc>
+  <rect width="1200" height="900" fill="#fbfcff"/>
+  <rect width="300" height="900" fill="#edf2fc"/>
+  <text x="48" y="84" fill="#14171c" font-family="Arial, sans-serif" font-size="54" font-weight="700" font-style="italic">z.</text>
+  <line x1="45" y1="102" x2="102" y2="102" stroke="#14171c" stroke-width="4"/>
+  <rect x="34" y="150" width="232" height="64" rx="14" fill="none" stroke="#c8d4e9" stroke-width="2"/>
+  <text x="54" y="190" fill="#14171c" font-family="Arial, sans-serif" font-size="22">IBS · 2D Materials</text>
+  <rect x="28" y="260" width="244" height="52" rx="14" fill="#fff"/>
+  <g fill="#20242a" font-family="Arial, sans-serif" font-size="22">
+    <text x="62" y="294">Overview</text>
+    <text x="62" y="364">Meetings</text>
+    <text x="62" y="434">Memory</text>
+    <text x="62" y="504">AI Assistant</text>
+  </g>
+  <line x1="300" y1="0" x2="300" y2="900" stroke="#e4e7ec" stroke-width="2"/>
+  <line x1="300" y1="82" x2="1200" y2="82" stroke="#e4e7ec" stroke-width="2"/>
+  <text x="356" y="55" fill="#667085" font-family="Arial, sans-serif" font-size="20">Overview</text>
+  <text x="360" y="164" fill="#15171b" font-family="Arial, sans-serif" font-size="42" font-weight="700">IBS · 2D Materials</text>
+  <g fill="#fff" stroke="#dfe4ec" stroke-width="2">
+    <rect x="360" y="220" width="230" height="150" rx="16"/>
+    <rect x="620" y="220" width="230" height="150" rx="16"/>
+    <rect x="880" y="220" width="230" height="150" rx="16"/>
+  </g>
+  <g fill="#17191d" font-family="Arial, sans-serif" font-size="44">
+    <text x="390" y="286">3</text><text x="650" y="286">6</text><text x="910" y="286">1</text>
+  </g>
+  <g fill="#7a818d" font-family="Arial, sans-serif" font-size="20">
+    <text x="390" y="332">Meetings</text><text x="650" y="332">Contributors</text><text x="910" y="332">Report</text>
+  </g>
+  <text x="360" y="444" fill="#17191d" font-family="Arial, sans-serif" font-size="28" font-weight="700">Research continuity, made visible.</text>
+  <g stroke="#e4e7ec" stroke-width="2">
+    <line x1="360" y1="520" x2="1110" y2="520"/>
+    <line x1="360" y1="610" x2="1110" y2="610"/>
+    <line x1="360" y1="700" x2="1110" y2="700"/>
+  </g>
+  <g fill="#6f7782" font-family="Arial, sans-serif" font-size="19">
+    <text x="360" y="490">09.02</text><text x="448" y="490" fill="#25282d">Project planning</text>
+    <text x="360" y="580">09.12</text><text x="448" y="580" fill="#25282d">First-round results</text>
+    <text x="360" y="670">09.23</text><text x="448" y="670" fill="#25282d">Progress review</text>
+  </g>
+  <circle cx="154" cy="780" r="52" fill="#8c87f4" opacity=".85"/>
+</svg>
